@@ -14,6 +14,7 @@ label start:
     #Add flame animation here
     "You attempt to sit up but realize you've been tied down to a table. The metal feels cold against your skin."
 
+    jump intro
 
     # Game end.
     return

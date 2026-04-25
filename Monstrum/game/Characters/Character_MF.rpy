@@ -1,10 +1,9 @@
-define MF = Character("MF", color="#CF211B")
-
 # variables
 default MF_Name = "..."
 
 
 # Images:
+image MF_Robed = "images/Characters/MF/MF_Robed.png"
 
-image MF_Robed = "MF_Robed.png"
-
+# Character
+define MF = Character("[MF_Name]", color="#CF211B")
