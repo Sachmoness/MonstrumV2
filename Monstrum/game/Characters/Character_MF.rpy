@@ -1,7 +1,6 @@
 # variables
 default MF_Name = "..."
 
-
 # Images:
 image MF_Robed = "images/Characters/MF/MF_Robed.png"
 

@@ -24,6 +24,6 @@ label intro:
 
     pause 1
 
-    show MF Robed zorder 1 with dissolve
+    show MF_Robed zorder 1 with dissolve
 
     pause 0.6
