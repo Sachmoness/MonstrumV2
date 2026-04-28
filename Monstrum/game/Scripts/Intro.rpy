@@ -5,6 +5,8 @@ image flame_atl:
     pause 0.1
     repeat
 
+image Book = "images/Props/Book/Book.png"
+
 
 label intro:
 
@@ -27,3 +29,108 @@ label intro:
     show MF_Robed zorder 1 with dissolve
 
     pause 0.6
+
+    menu:
+
+        "Who are you?":
+            jump choice1_passive
+
+        "Where am I?":
+            jump choice1_neutral
+
+        "What the fuck!?":
+            jump choice1_aggressive
+
+label choice1_passive:
+
+    $ menu_flag = True
+
+    MF "You who heeded the call. Answer the questions or enter the void."
+
+    jump choice1_done
+
+
+label choice1_neutral:
+
+    $ menu_flag = True
+
+    MF "You who heeded the call. Answer the questions or enter the void."
+
+    jump choice1_done
+
+
+label choice1_aggressive:
+
+    $ menu_flag = False
+
+    MF "You who heeded the call. Answer the questions or enter the void."
+
+    jump choice1_done
+
+label choice1_done:
+
+    Player "...What? What the hell is this! What do you freaks want from me?"
+
+    MF "Do you heed the call?"
+
+    show Book zorder 3 with dissolve
+
+    "They hold up a large book with a blood red cover. The title, scrawled in black ink says 'Monstrum'."
+
+    stop sound fadeout 3
+
+    "You recognize the cover. It was the journal your mentor sent you before they vanished."
+
+    "You begin to struggle."
+    
+    scene bg_cafeDark at scene_shake
+    play sound sfx_Ominous
+    show MF_Robed zorder 3
+    show Cultists
+    show flame_atl zorder 2 with dissolve
+
+    Player "Give that back it's mine!"
+
+    MF "Your personal belongings will be returned to the void should you not heed the call. Should you heed the call, they will be returned."
+
+    Player "..."
+
+    MF "Then we proceed."
+
+    Player "..."
+
+    MF "To heed the call, you must answer the following questions faithfully and honestly. Indicate your understanding of the prior statement."
+
+    pause 0.6
+
+    menu:
+
+        "Stay Silent":
+            jump choice2_passive
+
+        "Fine...":
+            jump choice2_neutral
+
+        "Bite me.":
+            jump choice2_aggressive
+            
+
+label choice2_passive:
+
+    MF "Your compliance has been acknowledged."
+
+    jump question_one
+
+
+label choice2_neutral:
+
+    MF "Your compliance has been acknowledged."
+
+    jump question_one
+
+
+label choice2_aggressive:
+
+    MF "Your petulance has been acknowledged. We proceed."
+
+    jump question_one
