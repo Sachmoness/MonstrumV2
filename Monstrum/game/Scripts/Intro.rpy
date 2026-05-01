@@ -178,3 +178,169 @@ label question_one:
     MF "Question two."
 
     MF "How did you receive THE CALL?"
+
+    jump question_two
+
+
+label question_two:
+
+    pause 0.6
+
+    menu:
+
+        "I was looking for my mentor...":
+            jump question_three
+
+        "That book... it showed up one day, and I opened it...":
+            jump question_three
+
+        "Online job bulletin post.":
+            jump question_three
+
+
+label question_three:
+
+    MF "Your response has been noted."
+
+    MF "Third question."
+
+    MF "What is the difference between a Machiatto, a Capuccino, and a Latte?"
+
+    pause 0.6
+
+    menu:
+
+        "Huh?":
+            jump choice3_passive
+
+        "Uh, milk I think...":
+            jump choice3_neutral
+
+        "A macchiato adds an additional splash of milk to a shot of espresso, a cappuccino is equal parts espresso, milk and milk foam, and a latte is mostly milk with espresso.":
+            jump choice3_aggressive
+
+            
+label choice3_passive:
+
+    MF "Incorrect answer. Correction to your answer: Each are representative of different ratios of milk to coffee."
+
+    Player "Okay..."
+
+    MF "Your answer is sufficient enough to deem you worthy. Though you will require additional training."
+
+    Player "What?"
+
+    hide flame_atl
+    hide Cultists
+    scene bg_cafeDark at scene_shake
+    show Cultists_Turned
+    show MF_Robed
+    hide Book
+
+    pause 0.6
+
+    Player "!!!"
+
+    jump choice3_done
+
+
+label choice3_neutral:
+
+    MF "Sufficient. Correction to your answer: Each are representative of different ratios of milk to coffee."
+
+    Player "Okay..."
+
+    MF "Your answer is sufficient enough to deem you worthy. Though you will require additional training."
+
+    Player "What?"
+
+    hide flame_atl
+    hide Cultists
+    scene bg_cafeDark at scene_shake
+    show Cultists_Turned
+    show MF_Unrobed
+    hide Book
+
+    pause 0.6
+
+    Player "!!!"
+
+    jump choice3_done
+
+
+label choice3_aggressive:
+
+    MF "..."
+
+    Player "Did I get it right?"
+
+    MF "Your answer is sufficient enough to deem you worthy. Though you will require additional training."
+
+    Player "What?"
+
+    hide flame_atl
+    scene bg_cafeDark at scene_shake
+    hide Cultists
+    show Cultists_Turned
+    show MF_Unrobed
+    hide book
+
+    pause 0.6
+
+    Player "!!!"
+
+    jump choice3_done
+
+
+
+label choice3_done:
+
+    scene bg_Cafe
+
+    stop music fadeout 1.5
+
+    show MF_Unrobed with dissolve
+
+    MF "You're hired. The probation is two weeks. No overtime pay. Clock in is at 9am, Clock out is 5pm."
+
+    MF "You have 30 minutes for your break time, but breaks can only be taken from 1pm-3pm. Questions?"
+
+    Player "..."
+
+    Player "What happened to the guys in robes?"
+
+    MF "Their shift is over so I guess they went home."
+
+    Player "..."
+
+    MF "Here's your employee manual back. You'll find the ratios for orders inside and any other instructions you may need."
+
+    MF "And if you have any other questions..."
+
+    show MF_Disgust at shake_centered
+
+    MF "Figure it out yourself. I'll be in the office."
+
+    Player "Wait!"
+
+    show MF_Unrobed at shake_centered
+
+    MF "..."
+
+    Player "What's your name?"
+
+    show MF_Turned
+
+    MF "I find that unreasonably forward of you."
+
+
+    menu:
+
+        "...?":
+            jump choice4_passive
+
+        "Oh... sorry?":
+            jump choice4_neutral
+
+        "You find me asking your name.. too forward":
+            jump choice4_aggressive
