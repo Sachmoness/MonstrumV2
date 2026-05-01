@@ -344,3 +344,84 @@ label choice3_done:
 
         "You find me asking your name.. too forward":
             jump choice4_aggressive
+
+
+label choice4_passive:
+
+    show MF_Unrobed
+
+    MF "If you must refer to me by name, you may call me MANAGER."
+
+    Player "Okay then... Manager, would you untie me?"
+
+    $ mf_name = "MANAGER"
+
+    MF "That is not my job."
+
+    jump choice4_done
+
+
+label choice4_neutral:
+
+    show MF_Disgust
+
+    MF "You should be. If you must refer to me by name, you may call me MANAGER."
+
+    Player "Okay then... Manager, would you untie me?"
+
+    $ mf_name = "MANAGER"
+
+    MF "Ugh."
+
+    jump choice4_done
+
+
+label choice4_aggressive:
+
+    show MF_Turned_Shade
+
+    MF "Yes. If you must refer to me, you may call me MANAGER."
+
+    Player "Uh... I never accepted the job."
+
+    $ mf_name = "MANAGER"
+
+    MF "The fact that you are still alive means that you have accepted it, at least until your probation ends. Or you are dismissed."
+
+    Player "Okay... then could you untie me?"
+
+    jump choice4_done
+
+
+label choice4_done:
+
+    show MF_Disgust
+    play sound dia_untieYou
+    "They do agree to untie you, but they seem pissed off about it the entire time."
+
+    Player "Thanks"
+
+    hide MF_Disgust
+    show MF_Turned
+
+    MF "Start by cleaning the counter. I'll be in the office. Do not bother me unless it's an absolute emergency."
+
+    Player "Oh sure."
+
+    hide MF_Turned
+    play sound dia_theyLeft
+    "Oh...They left before you finished the sentence."
+
+    "You pick up the Monstrum. They just threw it on the ground."
+    
+    "As you pick it up..."
+    play sound dia_theBook
+    "...the book begins to whisper to you."
+    play sound sfx_memory
+    "You recall now, this was the last thing your mentor gifted to you before they disappeared under mysterious circumstances."
+
+    "You can interact with your surroundings."
+    play sound dia_tryMirror
+    "Try it by clicking the mirror."
+
+    scene bg_Cafe
