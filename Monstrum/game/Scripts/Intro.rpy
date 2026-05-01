@@ -8,6 +8,36 @@ image flame_atl:
 image Book = "images/Props/Book/Book.png"
 
 
+
+# -------------------------------
+# Screens
+# -------------------------------
+screen name_input_screen():
+
+    modal True
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        padding (40, 30)
+
+        vbox:
+            spacing 15
+            xalign 0.5
+
+            text "What is your name?" xalign 0.5
+
+            input:
+                value VariableInputValue("player_name")
+                length 20
+                xalign 0.5
+
+            textbutton "Confirm":
+                xalign 0.5
+                action Return()
+
+# -------------------------------
+
 label intro:
 
     show flame_atl zorder 2 with dissolve
@@ -134,3 +164,17 @@ label choice2_aggressive:
     MF "Your petulance has been acknowledged. We proceed."
 
     jump question_one
+
+
+label question_one:
+
+    MF "What is your name?"
+
+    call screen name_input_screen
+
+    $ player_name = player_name.strip().title() or "You"
+    play sound sfx_memory
+
+    MF "Question two."
+
+    MF "How did you receive THE CALL?"
