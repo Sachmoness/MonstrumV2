@@ -15,3 +15,12 @@ define dia_untieYou = "audio/Intro/They agree to.mp3"
 define dia_theyLeft = "audio/Intro/They left before.mp3"
 define dia_theBook = "audio/Intro/As you pick.mp3"
 define dia_tryMirror= "audio/Intro/Try it there_s.mp3"
+
+
+# Mirror Scene:
+define dia_Stare = "audio/Dialogue/Mirror/SceneA/You stare into.mp3"
+define dia_You = "audio/Dialogue/Mirror/SceneA/Yep that's you.mp3"
+define dia_Looklike = "audio/Dialogue/Mirror/SceneA/That's what you.mp3"
+define dia_Haircut = "audio/Dialogue/Mirror/SceneA/You probably need.mp3"
+define dia_Face = "audio/Dialogue/Mirror/SceneA/Your mentor always.mp3"
+define dia_standStraight = "audio/Dialogue/Mirror/SceneA/Oh it's not.mp3"
