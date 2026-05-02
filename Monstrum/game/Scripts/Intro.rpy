@@ -425,3 +425,5 @@ label choice4_done:
     "Try it by clicking the mirror."
 
     scene bg_Cafe
+
+    call screen mirror_click
