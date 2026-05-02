@@ -317,17 +317,23 @@ label choice3_done:
 
     MF "And if you have any other questions..."
 
+    hide MF_Unrobed
+
     show MF_Disgust at shake_centered
 
     MF "Figure it out yourself. I'll be in the office."
 
     Player "Wait!"
 
+    hide MF_Disgust
+
     show MF_Unrobed at shake_centered
 
     MF "..."
 
     Player "What's your name?"
+
+    hide MF_Unrobed
 
     show MF_Turned
 
@@ -358,6 +364,7 @@ label choice4_passive:
 
     MF "That is not my job."
 
+    hide MF_Unrobed
     jump choice4_done
 
 
@@ -373,6 +380,7 @@ label choice4_neutral:
 
     MF "Ugh."
 
+    hide MF_Disgust
     jump choice4_done
 
 
@@ -390,6 +398,7 @@ label choice4_aggressive:
 
     Player "Okay... then could you untie me?"
 
+    hide MF_Turned_Shade
     jump choice4_done
 
 
