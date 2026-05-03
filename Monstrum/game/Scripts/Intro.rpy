@@ -409,6 +409,7 @@ label choice4_done:
     show MF_Disgust
     play sound dia_untieYou
     "They do agree to untie you, but they seem pissed off about it the entire time."
+    stop sound fadeout 1
 
     Player "Thanks"
 
@@ -422,18 +423,21 @@ label choice4_done:
     hide MF_Turned
     play sound dia_theyLeft
     "Oh...They left before you finished the sentence."
+    stop sound fadeout 1
 
     "You pick up the Monstrum. They just threw it on the ground."
     
     "As you pick it up..."
     play sound dia_theBook
     "...the book begins to whisper to you."
+    stop sound fadeout 1
     play sound sfx_memory
     "You recall now, this was the last thing your mentor gifted to you before they disappeared under mysterious circumstances."
 
     "You can interact with your surroundings."
     play sound dia_tryMirror
     "Try it by clicking the mirror."
+    stop sound fadeout 1
 
     scene bg_Cafe
 
