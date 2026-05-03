@@ -3,7 +3,8 @@
 ## Lines beginning with two '#' marks are comments, and you shouldn't uncomment
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
-
+## Mouse Pointer
+define config.mouse ={'default':[('gui/hand_pointer.png', 0, 0)]}
 
 ## Basics ######################################################################
 
@@ -61,8 +62,7 @@ define config.has_voice = True
 ## Uncomment the following line to set an audio file that will be played while
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
-
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/menu.mp3"
 
 
 ## Transitions #################################################################
