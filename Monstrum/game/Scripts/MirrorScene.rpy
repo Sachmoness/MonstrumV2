@@ -2,8 +2,8 @@ screen mirror_click():
 
     imagebutton:
         auto "images/Props/Mirror/overlay_mirror_%s.png"
-        xpos 738
-        ypos 108
+        xpos -5
+        ypos -10
         focus_mask True
         action Jump("mirror_scene")
 
