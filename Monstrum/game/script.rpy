@@ -11,9 +11,6 @@ label start:
     play sound dia_intro_blindfolded
     "You've been blindfolded and can hear chanting voices resonating around you."
 
-    #Add flame animation here
-    "You attempt to sit up but realize you've been tied down to a table. The metal feels cold against your skin."
-
     jump intro
 
     # Game end.

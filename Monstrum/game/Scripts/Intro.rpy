@@ -40,6 +40,8 @@ screen name_input_screen():
 
 label intro:
 
+    play sound "audio/Intro/cult_1_chanting.mp3"
+
     show flame_atl zorder 2 with dissolve
 
     "You attempt to sit up but realize you've been tied down to a table. The metal feels cold against your skin."
