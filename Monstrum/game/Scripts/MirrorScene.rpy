@@ -74,3 +74,5 @@ label mirror_done:
     "Alright it's time to start your shift. Let's go clean the counter."
 
     pause 0.5
+
+    jump CoffeMaking_Tutorial
