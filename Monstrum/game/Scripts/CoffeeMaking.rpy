@@ -9,6 +9,14 @@ image bg_coffeeStation = "images/Backgrounds/Coffee_Making/BG_Coffee Station.jpg
 # -------------------------------
 image coffee_station_idle = "images/Props/Coffee_Making/Interactable/Coffee Machine_Idle.png"
 image coffee_station_hover = "images/Props/Coffee_Making/Interactable/Coffee Machine_Hover.png"
+image coffee_beans = "images/Props/Coffee_Making/Inventory/coffeeBeans.png"
+image inventory_bar = "images/Props/Coffee_Making/Inventory/inventoryBar.png"
+image inventory_Arrow_Idle = "images/Props/Coffee_Making/Inventory/inventoryArrow_Idle.png"
+image inventory_Arrow_Hover = "images/Props/Coffee_Making/Inventory/inventoryArrow_Hover.png"
+image jug = "images/Props/Coffee_Making/Inventory/Jug.png"
+image monstrum = "images/Props/Coffee_Making/Inventory/Monstrum.png"
+image mug_empty = "images/Props/Coffee_Making/Inventory/mugEmpty.png"
+image mug_full = "images/Props/Coffee_Making/Inventory/mugFull.png"
 
 image CoffeeMachine:
     "images/Props/Coffee_Making/Coffee Pour/Coffee_Station_1.png"
@@ -46,6 +54,12 @@ label CoffeMaking_Tutorial:
 # --------- Screen ----------------------
 screen CoffeeMakingScreen():
     add "bg_coffeeStation"
+    add "inventory_bar"
+    add "inventory_Arrow_Idle"
+    add "coffee_beans"
+    add "jug"
+    add "monstrum"
+    add "mug_empty"
 
     imagebutton:
         idle "coffee_station_idle"
