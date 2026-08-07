@@ -8,6 +8,7 @@ image bg_coffeeStation = "images/Backgrounds/Coffee_Making/BG_Coffee Station.jpg
 # Props
 # -------------------------------
 image coffee_station_idle = "images/Props/Coffee_Making/Interactable/Coffee Machine_Idle.png"
+image coffee_station_hover = "images/Props/Coffee_Making/Interactable/Coffee Machine_Hover.png"
 
 image CoffeeMachine:
     "images/Props/Coffee_Making/Coffee Pour/Coffee_Station_1.png"
@@ -48,7 +49,7 @@ screen CoffeeMakingScreen():
 
     imagebutton:
         idle "coffee_station_idle"
-        hover "coffee_station_idle"
+        hover "coffee_station_hover"
         xpos 0.5
         ypos 0.5
         xanchor 0.5
