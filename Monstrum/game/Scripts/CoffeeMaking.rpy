@@ -18,6 +18,15 @@ image monstrum = "images/Props/Coffee_Making/Inventory/Monstrum.png"
 image mug_empty = "images/Props/Coffee_Making/Inventory/mugEmpty.png"
 image mug_full = "images/Props/Coffee_Making/Inventory/mugFull.png"
 
+# ------ Image Groups -------------
+image inventoryBar_group:
+    "inventory_bar"
+    "coffee_beans" 
+    "jug" 
+    "mug_empty"
+
+default inventory_bar_visible = False
+
 image CoffeeMachine:
     "images/Props/Coffee_Making/Coffee Pour/Coffee_Station_1.png"
     pause 0.1
@@ -54,12 +63,28 @@ label CoffeMaking_Tutorial:
 # --------- Screen ----------------------
 screen CoffeeMakingScreen():
     add "bg_coffeeStation"
-    add "inventory_bar"
-    add "inventory_Arrow_Idle"
-    add "coffee_beans"
-    add "jug"
+    #add "inventory_bar"
+    #add "inventory_Arrow_Idle"
+    #add "coffee_beans"
+    #add "jug"
     add "monstrum"
-    add "mug_empty"
+    #add "mug_empty"
+
+    if inventory_bar_visible:
+        add "inventory_bar" at truecenter
+        add "coffee_beans" xalign 0.36 yalign 0.5
+        add "jug" xalign 0.5 yalign 0.5
+        add "mug_empty" xalign 0.64 yalign 0.5
+
+    imagebutton:
+        idle "inventory_Arrow_Idle"
+        hover "inventory_Arrow_Hover"
+        xpos 20
+        ypos 20
+        xanchor 0.0
+        yanchor 0.0
+        focus_mask True
+        action ToggleVariable("inventory_bar_visible")
 
     imagebutton:
         idle "coffee_station_idle"
@@ -70,4 +95,6 @@ screen CoffeeMakingScreen():
         yanchor 0.5
         focus_mask True
         action [Hide("CoffeeMachine"), Show("CoffeeMachine", at_list=[truecenter])]
+
+    
 
